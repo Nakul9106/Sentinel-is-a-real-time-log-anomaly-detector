@@ -1,0 +1,54 @@
+# Sentinel Configuration
+
+# Path to the log file to monitor
+log_file: "data/app.log"
+
+# Path to the trained model file
+model_path: "models/sentinel_model.joblib"
+
+# Anomaly threshold:
+# In Sentinel, the anomaly severity score ranges from 0.0 (strictly normal) to 1.0 (critical anomaly).
+# A log entry with severity >= threshold triggers an alert.
+threshold: 0.65
+
+# Raw decision function cutoff (optional override for raw Isolation Forest score, default: 0.0)
+raw_threshold: 0.0
+
+# Name of the environment variable containing the Slack webhook URL
+webhook_env_var: "SLACK_WEBHOOK_URL"
+
+# Direct webhook URL (used if env var is not set, optional)
+webhook_url: ""
+
+# Optional Discord webhook URL (supports Discord or Slack-compatible webhook format)
+discord_webhook_url: ""
+
+# Minimum seconds to wait before sending another alert for similar/identical logs
+rate_limit_seconds: 5.0
+
+# Alert de-duplication window in seconds (identical log fingerprints are suppressed within this window)
+dedup_window_seconds: 30.0
+
+# Maximum retries when delivering webhook alerts
+max_retries: 3
+
+# Webhook request timeout in seconds
+webhook_timeout: 4.0
+
+# Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+log_level: "INFO"
+
+# Default model architecture: "isolation_forest" or "one_class_svm"
+model_type: "isolation_forest"
+
+# Contamination rate for training (expected proportion of outliers in training data, typically low: 0.01)
+contamination: 0.01
+
+# Polling interval in seconds when tailing log file
+poll_interval: 0.1
+
+# Batch size for streaming inference (1 = immediate per-line scoring, >1 = batch optimization)
+batch_size: 1
+
+# Dry-run mode: prints alerts to console with colored diagnostics instead of sending HTTP requests
+dry_run: true

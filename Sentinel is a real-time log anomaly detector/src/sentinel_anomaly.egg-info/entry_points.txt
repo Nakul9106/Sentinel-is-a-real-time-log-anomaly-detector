@@ -1,0 +1,4 @@
+[console_scripts]
+sentinel = sentinel.main:main
+sentinel-gen = sentinel.generate_logs:main
+sentinel-train = sentinel.train:main

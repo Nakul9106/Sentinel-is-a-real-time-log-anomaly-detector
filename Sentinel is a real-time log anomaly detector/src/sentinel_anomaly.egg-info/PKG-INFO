@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: sentinel-anomaly
+Version: 0.1.0
+Summary: Sentinel: Real-time Log Anomaly Detector
+Author: Sentinel DevOps & Security Team
+License-Expression: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scikit-learn>=1.3.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: joblib>=1.3.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: colorama>=0.4.6
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Dynamic: license-file
+
+# Sentinel: Real-time Log Anomaly Detector
+
+High-performance real-time log ingestion, unsupervised anomaly detection using Isolation Forests, and instant Slack/Discord alerting for DevOps and SRE teams.

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/sentinel/__init__.py
+src/sentinel_anomaly.egg-info/PKG-INFO
+src/sentinel_anomaly.egg-info/SOURCES.txt
+src/sentinel_anomaly.egg-info/dependency_links.txt
+src/sentinel_anomaly.egg-info/entry_points.txt
+src/sentinel_anomaly.egg-info/requires.txt
+src/sentinel_anomaly.egg-info/top_level.txt
